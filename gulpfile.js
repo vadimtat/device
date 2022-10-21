@@ -15,7 +15,7 @@ const syncServer = () => {
   server.init({
     server: 'build/',
     index: 'sitemap.html',
-    notify: false,
+    notify: true,
     open: true,
     cors: true,
     ui: false,

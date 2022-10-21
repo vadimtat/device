@@ -387,9 +387,17 @@ template {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
+  font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff");
+  src: url("/source/fonts/RobotoCondensed-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: url("/source/fonts/RobotoCondensed-Bold.ttf") format("ttf");
 }
 
 *,
@@ -754,19 +762,22 @@ button,
   pointer-events: auto;
 }
 
-.main-nav__wrapper {
-  width: 320px;
+.main-nav {
+  position: fixed;
   height: 70px;
-  margin: 0 auto;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
+  background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+}
+
+.main-nav__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
-  background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 }
 
 .main-nav__link-text {
@@ -780,6 +791,14 @@ button,
 
 .main-nav__logo-icon {
   display: block;
+}
+
+.main-nav__logo-icon--mobile {
+  display: block;
+}
+
+.main-nav__logo-icon--tablet {
+  display: none;
 }
 
 .main-nav__list {
@@ -797,11 +816,93 @@ button,
   margin-right: 20px;
 }
 
+.main-nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .main-nav__icon {
   display: block;
 }
 
 .main-nav__button {
+  border: 1px solid #F2F5F7;
+  border-radius: 3px;
+  display: none;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #F2F5F7;
+}
+
+.main-block {
+  margin: 0 auto;
+  background-image: url("../img/mainbackgroundmobile.png");
+  background-repeat: no-repeat;
+  background-position: 25% 50%;
+}
+
+.main-block__container {
+  padding: 0 28px;
+  padding-top: 150px;
+  padding-bottom: 190px;
+}
+
+.main-block__title {
+  margin: 0;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #F2F5F7;
+}
+
+.main-block__description {
+  margin-top: 20px;
+  font-family: "PT Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  color: #F2F5F7;
+}
+
+.main-block__button {
+  font-family: "Roboto Condensed";
+  padding: 10px 30px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #F2F5F7;
+  border: none;
+  background: #00B2FF;
+  border-radius: 3px;
+}
+
+.main-block__button--mobile {
+  display: block;
+}
+
+.main-block__button--tablet {
   display: none;
 }
 
@@ -847,8 +948,117 @@ button,
 */
 
 @media (min-width: 768px) {
+  .main-nav {
+    height: 100px;
+  }
+
   .main-nav__wrapper {
-    width: 770px;
+    height: 100px;
+  }
+
+  .main-nav__logo-icon--mobile {
+    display: none;
+  }
+
+  .main-nav__logo-icon--tablet {
+    display: block;
+  }
+
+  .main-nav__list {
+    margin-right: 55px;
+  }
+
+  .main-block {
+    background-image: url("../img/mainbackgroundtablet.png");
+  }
+
+  .main-block__container {
+    padding: 0 30px;
+    padding-top: 180px;
+    padding-bottom: 205px;
+  }
+
+  .main-block__title {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  .main-block__description {
+    font-size: 22px;
+    margin-bottom: 50px;
+  }
+
+  .main-block__button {
+    padding: 15px 25px;
+    margin-top: 50px;
+    margin-left: 95px;
+  }
+
+  .main-block__button--mobile {
+    display: none;
+  }
+
+  .main-block__button--tablet {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-nav {
+    height: 120px;
+  }
+
+  .main-nav__wrapper {
+    margin: 0 auto;
+    max-width: 1220px;
+    height: 120px;
+  }
+
+  .main-nav__link-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: "PT Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #F2F5F7;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .main-nav__list {
+    margin-right: 145px;
+  }
+
+  .main-nav__icon {
+    margin-right: 5px;
+  }
+
+  .main-nav__button {
+    background-color: transparent;
+    padding: 10px 15px;
+    display: block;
+    margin-right: 60px;
+  }
+
+  .main-block {
+    background-image: url("../img/mainbackgrounddesktop.png");
+    max-width: 1920px;
+  }
+
+  .main-block__container {
+    padding: 0 125px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1220px;
+    padding-top: 205px;
+    padding-bottom: 280px;
   }
 }
 

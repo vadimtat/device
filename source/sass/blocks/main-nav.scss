@@ -1,29 +1,75 @@
-.main-nav {}
-
-.main-nav__wrapper {
-  width: 320px;
+.main-nav {
+  position: fixed;
   height: 70px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
+  width: 100%;
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 
   @media(min-width: 768px) {
-    width: 770px;
+    height: 100px;
+  }
+
+  @media(min-width: 1024px) {
+    height: 120px;
+  }
+}
+
+.main-nav__wrapper {
+  display: flex;
+  align-items: center;
+
+  @media(min-width: 768px) {
+    height: 100px;
+  }
+
+  @media(min-width: 1024px) {
+    margin: 0 auto;
+    max-width: 1220px;
+    height: 120px;
   }
 }
 
 .main-nav__link-text {
   display: none;
+
+  @media(min-width: 1024px) {
+    display: flex;
+    font-family: 'PT Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #F2F5F7;
+    align-items: center;
+  }
 }
 
 .main-nav__logo {
   margin-left: 26px;
   margin-right: auto;
+
+  @media(min-width: 768px) {}
+
+  @media(min-width: 1024px) {}
 }
 
 .main-nav__logo-icon {
   display: block;
+}
+
+.main-nav__logo-icon--mobile {
+  display: block;
+
+  @media(min-width: 768px) {
+    display: none;
+  }
+}
+
+.main-nav__logo-icon--tablet {
+  display: none;
+
+  @media(min-width: 768px) {
+    display: block;
+  }
 }
 
 .main-nav__list {
@@ -31,18 +77,51 @@
   list-style-type: none;
   display: flex;
   align-items: center;
+
+  @media(min-width: 768px) {
+    margin-right: 55px;
+  }
+
+  @media(min-width: 1024px) {
+    margin-right: 145px;
+  }
 }
 
 .main-nav__item {
   margin-right: 20px;
+
 }
 
-.main-nav__link {}
+.main-nav__link {
+  display: flex;
+}
 
 .main-nav__icon {
   display: block;
+
+  @media(min-width: 1024px) {
+    margin-right: 5px;
+  }
 }
 
 .main-nav__button {
+  border: 1px solid #F2F5F7;
+  border-radius: 3px;
   display: none;
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #F2F5F7;
+
+  @media(min-width: 1024px) {
+    background-color: transparent;
+    padding: 10px 15px;
+    display: block;
+    margin-right: 60px;
+  }
 }
