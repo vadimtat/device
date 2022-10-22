@@ -1,0 +1,98 @@
+.advantages {}
+
+.advantages__container {
+  @media(min-width: 768px) {
+    max-width: 670px;
+    margin: 0 auto;
+  }
+
+  @media(min-width: 1024px) {
+    margin: 0 auto;
+    max-width: 1220px;
+  }
+}
+
+.advantages__list {
+  padding: 0;
+  padding-left: 25px;
+  margin: 0;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+
+  @media(min-width: 768px) {
+    margin-top: 80px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 320px 320px;
+    gap: 30px;
+  }
+
+  @media(min-width: 1024px) {
+    margin-top: 120px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.advantages__item {
+  margin-right: 29px;
+  max-width: 270px;
+  margin-bottom: 30px;
+  min-height: 340px;
+  border: 1px solid #EBEBEB;
+  border-left: 5px solid #00B2FF;
+
+  @media(min-width: 768px) {
+    min-width: 320px;
+    min-height: 360px;
+    margin: 0;
+  }
+
+  @media(min-width: 1024px) {
+    min-width: 595px;
+    min-height: 300px;
+  }
+
+  &:hover {
+    background: #00B2FF;
+  }
+
+  &:hover p {
+    color: #F2F5F7;
+  }
+
+  &:hover h3 {
+    color: #F2F5F7;
+  }
+}
+
+.advantages__wrapper {
+  padding: 30px;
+}
+
+.advantages__icon {
+  margin: 0;
+}
+
+.advantages__title {
+  margin: 0;
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #00B2FF;
+}
+
+.advantages__text {
+  margin: 0;
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 135%;
+  color: #041827;
+}

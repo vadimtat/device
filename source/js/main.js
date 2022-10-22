@@ -1,5 +1,5 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+import { iosVhFix } from './utils/ios-vh-fix';
+import { initModals } from './modules/modals/init-modals';
 
 // ---------------------------------
 
@@ -19,7 +19,11 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
   });
 });
-
+let info = document.querySelector(".about__button")
+let text_info = document.querySelector(".about__text")
+info.onclick = function () {
+  text_info.classList.toggle('more')
+}
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
