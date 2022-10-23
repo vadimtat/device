@@ -1,9 +1,16 @@
 .products {
   background: #041827;
+
+  @media(min-width: 1024px) {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
 }
 
 .products__container {
-  width: 270px;
+  margin: 0 auto;
+  max-width: 270px;
+  width: 100%;
   padding: 0 25px;
 
   @media(min-width: 768px) {
@@ -26,41 +33,65 @@
   font-size: 28px;
   line-height: 140.62%;
   color: #FFFFFF;
+  padding-top: 50px;
+
+  @media(min-width: 768px) {
+    display: none;
+  }
 }
 
 .products__title {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: #FFFFFF;
+  padding-top: 60px;
+  padding-bottom: 50px;
   display: none;
+
+  @media(min-width: 768px) {
+    display: block;
+  }
 }
 
 .products__list {
+  margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media(min-width: 768px) {
+    padding-bottom: 75px;
+  }
 
   @media(min-width: 1024px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 85px;
-
   }
 }
 
 .products__card {
   display: block;
-  min-width: 270px;
+  max-width: 270px;
+  width: 100%;
   min-height: 250px;
 
   @media(min-width: 768px) {
-    min-width: 670px;
+    max-width: 670px;
     height: 250px;
   }
 
   @media(min-width: 1024px) {
-    min-width: 350px;
+    max-width: 350px;
     height: 650px;
   }
 }
 
 .products__name {
+  margin: 0;
+  padding: 30px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -70,18 +101,21 @@
 }
 
 .products__link {
+  margin-top: auto;
   text-decoration: none;
 }
 
-.products__icon {
-  display: block;
-}
+.products__icon {}
 
 .products__card--one {
   background-image: url("../img/card1.png");
 
   @media(min-width: 768px) {
     background-image: url("../img/card1tablet.png")
+  }
+
+  @media(min-width: 1024px) {
+    background-image: url("../img/card1desktop.png")
   }
 }
 
@@ -91,6 +125,10 @@
   @media(min-width: 768px) {
     background-image: url("../img/card2tablet.png")
   }
+
+  @media(min-width: 1024px) {
+    background-image: url("../img/card2desktop.png")
+  }
 }
 
 .products__card--three {
@@ -98,5 +136,9 @@
 
   @media(min-width: 768px) {
     background-image: url("../img/card3tablet.png")
+  }
+
+  @media(min-width: 1024px) {
+    background-image: url("../img/card3desktop.png")
   }
 }

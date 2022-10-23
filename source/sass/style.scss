@@ -1,13 +1,11 @@
 // Vendor
 // ---------------------------------
-
 @import "vendor/normalize";
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
 // Global
 // ---------------------------------
-
 @import "variables";
 @import "mixins";
 @import "global/fonts";
@@ -25,6 +23,11 @@
 @import "blocks/advantages";
 @import "blocks/about";
 @import "blocks/products";
+@import "blocks/form";
+@import "blocks/footer-socials";
+@import "blocks/footer-section";
+@import "blocks/footer-address";
+@import "blocks/footer";
 
 // ---------------------------------
 

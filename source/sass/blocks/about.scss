@@ -1,17 +1,18 @@
-.about {}
+.about {
+  margin: 0 auto;
+}
 
 .about__container {
+  margin: 0 auto;
   padding: 0 25px;
 
   @media(min-width: 768px) {
     padding: 0;
     display: flex;
     max-width: 670px;
-    margin: 0 auto;
   }
 
   @media(min-width: 1024px) {
-    margin: 0 auto;
     max-width: 1220px;
   }
 }
