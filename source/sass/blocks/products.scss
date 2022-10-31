@@ -1,144 +1,200 @@
 .products {
+  padding-top: 50px;
   background: #041827;
+  padding-bottom: 86px;
 
-  @media(min-width: 1024px) {
-    max-width: 1920px;
+  @media (min-width: 768px) {
+    padding-top: 55px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: 1024px) {
+    background-size: cover;
     margin: 0 auto;
   }
 }
 
 .products__container {
   margin: 0 auto;
-  max-width: 270px;
-  width: 100%;
   padding: 0 25px;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     margin: 0 auto;
     padding: 0;
     max-width: 670px;
     width: 100%;
   }
 
-  @media(min-width: 1024px) {
+  @media (min-width: 1024px) {
     margin: 0 auto;
-    max-width: 1220px;
+    max-width: 1235px;
   }
 }
 
 .products__title--mobile {
-  font-family: 'Roboto Condensed';
+  margin-bottom: 40px;
+  font-family: $ff-accent;
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
   line-height: 140.62%;
-  color: #FFFFFF;
-  padding-top: 50px;
+  color: #ffffff;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     display: none;
   }
 }
 
-.products__title {
-  font-family: 'Roboto Condensed';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
-  color: #FFFFFF;
-  padding-top: 60px;
-  padding-bottom: 50px;
+.products__title--tablet {
   display: none;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
     display: block;
   }
+
+  @media (min-width: 1024px) {
+    margin-top: 10px;
+    margin-left: 8px;
+  }
+}
+
+.products__title {
+  font-family: $ff-accent;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140.62%;
+  color: #ffffff;
 }
 
 .products__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  margin-top: 26px;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
+    margin-top: 38px;
     padding-bottom: 75px;
   }
 
-  @media(min-width: 1024px) {
+  @media (min-width: 1024px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 85px;
+    gap: 78px;
+    margin-left: 7px;
+    margin-top: 54px;
+    padding-bottom: 111px;
   }
 }
 
 .products__card {
-  display: block;
-  max-width: 270px;
+  display: flex;
   width: 100%;
+  max-width: 270px;
   min-height: 250px;
+  margin-bottom: 30px;
 
-  @media(min-width: 768px) {
+  &:last-child {
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin: 0;
+    margin-bottom: 30px;
+    flex-direction: row;
     max-width: 670px;
     height: 250px;
   }
 
-  @media(min-width: 1024px) {
+  @media (min-width: 1024px) {
     max-width: 350px;
     height: 650px;
   }
 }
 
 .products__name {
+  font-family: $ff-accent;
+  max-width: 203px;
   margin: 0;
-  padding: 30px;
+  padding: 28px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
 
+  @media (min-width: 768px) {
+    max-width: 150px;
+    padding: 0;
+    font-size: 20px;
+    margin-top: 37px;
+    margin-left: 45px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 160px;
+    margin-top: 47px;
+    margin-left: 41px;
+  }
 }
 
 .products__link {
   margin-top: auto;
+  margin-left: auto;
   text-decoration: none;
 }
 
-.products__icon {}
+.products__icon--tablet {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.products__icon--mobile {
+  display: block;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
 
 .products__card--one {
   background-image: url("../img/card1.png");
 
-  @media(min-width: 768px) {
-    background-image: url("../img/card1tablet.png")
+  @media (min-width: 768px) {
+    background-image: url("../img/card1tablet.png");
   }
 
-  @media(min-width: 1024px) {
-    background-image: url("../img/card1desktop.png")
+  @media (min-width: 1024px) {
+    background-image: url("../img/card1desktop.png");
   }
 }
 
 .products__card--two {
   background-image: url("../img/card2.png");
 
-  @media(min-width: 768px) {
-    background-image: url("../img/card2tablet.png")
+  @media (min-width: 768px) {
+    background-image: url("../img/card2tablet.png");
   }
 
-  @media(min-width: 1024px) {
-    background-image: url("../img/card2desktop.png")
+  @media (min-width: 1024px) {
+    background-image: url("../img/card2desktop.png");
   }
 }
 
 .products__card--three {
   background-image: url("../img/card3.png");
 
-  @media(min-width: 768px) {
-    background-image: url("../img/card3tablet.png")
+  @media (min-width: 768px) {
+    background-image: url("../img/card3tablet.png");
   }
 
-  @media(min-width: 1024px) {
-    background-image: url("../img/card3desktop.png")
+  @media (min-width: 1024px) {
+    background-image: url("../img/card3desktop.png");
   }
 }
