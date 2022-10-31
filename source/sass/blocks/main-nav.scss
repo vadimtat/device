@@ -2,6 +2,7 @@
   width: 100%;
   position: absolute;
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+
   @media (min-width: 1024px) {
     position: fixed;
   }
@@ -9,6 +10,7 @@
 
 .main-nav__wrapper {
   display: flex;
+
   @media (min-width: 768px) {
     padding-top: 20px;
     padding-bottom: 25px;
@@ -57,6 +59,7 @@
 .main-nav__logo-icon--mobile {
   display: block;
   margin-top: 15px;
+
   @media (min-width: 768px) {
     display: none;
   }
