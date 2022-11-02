@@ -1,5 +1,14 @@
 .form {
-  background: #00b3ff;
+  --grad-stop: 33.5%;
+  background: {
+    color: #00b3ff;
+    image: url('../img/paperairplane.png'), linear-gradient(139deg,rgba(4, 24, 39, 0.5) var(--grad-stop), transparent var(--grad-stop)) ;
+
+    size: auto, 100%;
+    repeat: no-repeat;
+
+    position: 350px 246px, 0 0;
+  }
 
   @media (min-width: 768px) {
     padding-top: 46px;
@@ -12,22 +21,6 @@
     margin: 0 auto;
     max-height: 840px;
     overflow: hidden;
-  }
-}
-
-.form__background {
-  display: none;
-
-  @media (min-width: 1024px) {
-    position: absolute;
-    overflow: hidden;
-    display: block;
-    left: -678px;
-    bottom: 264px;
-    width: 1614px;
-    height: 965px;
-    background: rgba(4, 24, 39, 0.5);
-    transform: rotate(-40.9deg);
   }
 }
 
@@ -45,9 +38,9 @@
   }
 
   @media (min-width: 1024px) {
-    justify-content: space-between;
+    display: grid;
+    justify-content: end;
     max-width: 1235px;
-    display: flex;
   }
 }
 

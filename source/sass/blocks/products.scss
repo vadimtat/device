@@ -1,33 +1,17 @@
 .products {
-  padding-top: 50px;
+  padding: 0 var(--side-offset, 20px);
   background: #041827;
-  padding-bottom: 86px;
+  background-size: cover;
+  margin: 0 auto;
+  padding-top: 55px;
 
-  @media (min-width: 768px) {
-    padding-top: 55px;
+  @media (max-width: 1024px) {
     padding-bottom: 0;
   }
 
-  @media (min-width: 1024px) {
-    background-size: cover;
-    margin: 0 auto;
-  }
-}
-
-.products__container {
-  margin: 0 auto;
-  padding: 0 25px;
-
-  @media (min-width: 768px) {
-    margin: 0 auto;
-    padding: 0;
-    max-width: 670px;
-    width: 100%;
-  }
-
-  @media (min-width: 1024px) {
-    margin: 0 auto;
-    max-width: 1235px;
+  @media (max-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 86px;
   }
 }
 
@@ -72,25 +56,39 @@
 .products__list {
   margin: 0;
   padding: 0;
-  list-style-type: none;
-  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 78px;
+  margin-left: 7px;
+  margin-top: 54px;
+  padding-bottom: 111px;
 
-  @media (min-width: 768px) {
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
     margin-top: 38px;
     padding-bottom: 75px;
   }
 
-  @media (min-width: 1024px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 78px;
-    margin-left: 7px;
-    margin-top: 54px;
-    padding-bottom: 111px;
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 26px;
+  }
+}
+
+.products__icon {
+  display: block;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
   }
 }
 
 .products__card {
+  background: rgba(4, 24, 39, 0.5);
   display: flex;
   width: 100%;
   max-width: 270px;
@@ -110,7 +108,6 @@
   }
 
   @media (min-width: 1024px) {
-    max-width: 350px;
     height: 650px;
   }
 }
@@ -145,22 +142,6 @@
   margin-top: auto;
   margin-left: auto;
   text-decoration: none;
-}
-
-.products__icon--tablet {
-  display: none;
-
-  @media (min-width: 768px) {
-    display: block;
-  }
-}
-
-.products__icon--mobile {
-  display: block;
-
-  @media (min-width: 768px) {
-    display: none;
-  }
 }
 
 .products__card--one {

@@ -1,64 +1,40 @@
 .advantages {
-  margin: 0 auto;
-}
-
-.advantages__container {
-  margin: 0 auto;
-
-  @media (min-width: 768px) {
-    max-width: 670px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: 1024px) {
-    max-width: 1225px;
-  }
+  padding: 0 var(--side-offset, 20px);
 }
 
 .advantages__list {
   padding: 0;
-  padding-left: 25px;
-  margin: 0;
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   list-style-type: none;
+  width: 100%;
+  gap: 30px;
 
-  @media (min-width: 768px) {
-    margin-top: 80px;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 320px 320px;
-    gap: 30px;
-  }
-
-  @media (min-width: 1024px) {
-    margin-top: 120px;
-    margin-left: 0;
-    grid-template-columns: 595px 595px;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .advantages__item {
-  margin-right: 29px;
+  padding: 45px 40px;
+  max-width: 595px;
   width: 100%;
-  max-width: 270px;
-  margin-bottom: 30px;
-  min-height: 340px;
+  min-height: 300px;
   border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
 
   &:nth-child(4n + 3) {
-    min-height: 325px;
+    min-height: 300px;
   }
 
   &:nth-child(4n) {
-    min-height: 325px;
+    min-height: 300px;
   }
 
-  @media (min-width: 768px) {
+  @media (max-width: 1024px) {
     padding: 36px 40px;
-    max-width: 320px;
     min-height: 360px;
     margin: 0;
 
@@ -71,17 +47,15 @@
     }
   }
 
-  @media (min-width: 1024px) {
-    padding: 45px 40px;
-    max-width: 595px;
-    min-height: 300px;
+  @media (max-width: 768px) {
+    min-height: 340px;
 
     &:nth-child(4n + 3) {
-      min-height: 300px;
+      min-height: 325px;
     }
 
     &:nth-child(4n) {
-      min-height: 300px;
+      min-height: 325px;
     }
   }
 
@@ -102,18 +76,6 @@
   }
 }
 
-.advantages__wrapper {
-  padding: 25px;
-
-  @media (min-width: 768px) {
-    padding: 0;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 0;
-  }
-}
-
 .advantages__icon {
   margin: 0;
   margin-top: 4px;
@@ -129,7 +91,7 @@
   }
 }
 
-.advantages__title {
+.advantages h3 {
   margin: 0;
   margin-top: 10px;
   margin-bottom: 15px;
@@ -153,7 +115,7 @@
   }
 }
 
-.advantages__text {
+.advantages p {
   margin: 0;
   font-family: $ff-default;
   font-style: normal;
