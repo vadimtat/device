@@ -31,14 +31,12 @@
 
   &__wrapper {
     position: relative;
-
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 60px 40px;
+    margin: auto;
+    padding: 40px;
+    background: #00b3ff;
+    border-radius: 3px;
+    max-width: 500px;
+    max-height: 610px;
 
     @include vp-767 {
       padding: 60px 16px;
@@ -57,12 +55,6 @@
   }
 
   &__content {
-    position: relative;
-
-    width: 600px;
-    padding: 40px;
-
-    background-color: $color-default-white;
 
     @include vp-767 {
       width: 100%;
@@ -83,6 +75,139 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $ff-accent;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140.62%;
+    color: #ffffff;
+  }
+
+  &__subtitle {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+    font-family: $ff-default;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+  }
+
+  &__name {
+    width: 100%;
+    padding: 14px;
+    background: rgba(4, 20, 39, 0.15);
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    font-family: $ff-default;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    &::placeholder {
+      font-family: $ff-default;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #ffffff;
+    }
+  }
+
+  &__phone {
+    width: 100%;
+    padding: 14px;
+    background: rgba(4, 20, 39, 0.15);
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    font-family: $ff-default;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    &::placeholder {
+      font-family: $ff-default;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #ffffff;
+    }
+  }
+
+  &__button {
+    border: none;
+    padding: 13px 60px;
+    font-family: $ff-accent;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #041427;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  & textarea {
+    padding: 15px;
+    background: rgba(4, 20, 39, 0.15);
+    border: none;
+    border-radius: 3px;
+    max-width: 420px;
+    width: 100%;
+    margin-bottom: 25px;
+    font-family: $ff-default;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    min-height: 155px;
+
+    &::placeholder {
+      font-family: $ff-default;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #ffffff;
+    }
+  }
+
+  &__evidence {
+    margin: 0;
+    font-family: $ff-default;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    opacity: 0.8;
+    margin-top: 20px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+      width: 100%;
+      max-width: 580px;
+    }
   }
 
   &--responsive {
