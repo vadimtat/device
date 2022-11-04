@@ -7,11 +7,11 @@
 
   @media (max-width: 1024px) {
     margin-top: 75px;
+    margin-bottom: 53px;
   }
 
   @media (max-width: 768px) {
-    margin-top: 17px;
-    margin-bottom: 60px;
+    margin: 41px 0 85px 0;
   }
 }
 
@@ -28,15 +28,16 @@
 }
 
 .about__right-side {
+  margin-left: 100px;
+  max-width: 970px;
 
-  @media (min-width: 768px) {
+  @media (max-width: 1024px) {
     margin-left: 25px;
     max-width: 495px;
   }
 
-  @media (min-width: 1024px) {
-    margin-left: 100px;
-    max-width: 970px;
+  @media (max-width: 768px) {
+    margin-left: 0;
   }
 }
 
@@ -53,17 +54,19 @@
   font-family: $ff-accent;
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 140.62%;
+  font-size: 36px;
+  line-height: 51px;
   color: #041827;
 
-  @media (min-width: 768px) {
+  @media (max-width: 1024px) {
     margin-bottom: 11px;
     font-size: 36px;
     line-height: 51px;
   }
 
-  @media (min-width: 1024px) {
+  @media (max-width: 768px) {
+    margin-bottom: 4px;
+    font-size: 28px;
     margin: 0;
   }
 }
@@ -73,18 +76,20 @@
   font-family: $ff-default;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 134.4%;
+  font-size: 16px;
+  line-height: 22px;
   color: #041827;
 
-  @media (min-width: 768px) {
+  @media (max-width: 1024px) {
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
   }
 
-  @media (min-width: 1024px) {
-    margin-top: 12px;
+  @media (max-width: 768px) {
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 134.4%;
   }
 }
 

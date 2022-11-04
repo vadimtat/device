@@ -1,0 +1,131 @@
+.accordion {
+  &__trigger {
+    font-family: $ff-accent;
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    &::-webkit-details-marker {
+      display: none; // Для старых Chrome и Safari
+    }
+  }
+
+  @media (max-width: 767px) {
+    height: 60px;
+    overflow: hidden;
+    transition: height 0.4s;
+    border-top: 1px solid rgba(248, 253, 255, 0.7);
+    border-bottom: 1px solid rgba(248, 253, 255, 0.7);
+
+
+    &__trigger {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 22px 25px;
+
+      &::after {
+        content: "➕";
+      }
+
+      &--blocked {
+        border-bottom: none;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &[open] {
+      height: 100%;
+      max-height: 310px;
+    }
+
+    &[open] &__trigger::after {
+      content: "➖";
+    }
+  }
+}
+
+.accordion__list1 {
+  margin-top: 21px;
+  padding: 0;
+  list-style-type: none;
+  max-height: 160px;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    max-height: none;
+    max-width: 224px;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 24px;
+    margin-top: -7px;
+  }
+}
+
+.accordion__list2 {
+  margin-top: 21px;
+  margin-right: 12px;
+  padding: 0;
+  list-style-type: none;
+
+  @media (max-width: 1024px) {
+    margin-right: 9px;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 24px;
+    margin-top: -7px;
+  }
+}
+
+.accordion__item a {
+  font-family: $ff-default;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  color: rgba(255, 255, 255, 0.7);
+
+  @media (max-width: 768px) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 135%;
+  }
+}
+
+.accordion__list1 .accordion__item {
+  margin-bottom: 5px;
+  margin-right: 22px;
+  max-width: 230px;
+
+  @media (max-width: 1024px) {
+    max-width: none;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 7px;
+  }
+}
+
+.accordion__list2 .accordion__item {
+  margin-bottom: 5px;
+  margin-right: 22px;
+  max-width: 310px;
+
+  @media (max-width: 1024px) {
+    margin-right: 0;
+  }
+}

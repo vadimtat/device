@@ -123,6 +123,104 @@ anchors.forEach(function (item) {
     }, animationTime / framesCount);
   });
 });
+
+const accordions = document.querySelectorAll(".accordion");
+const mobileQuery = "(max-width: 767px)";
+const mobileMedia = window.matchMedia(mobileQuery);
+let openedAccordionOnMobile = false;
+
+const triggerClosePrevHandlers = Array.from(
+  { length: accordions.length },
+  (_, index) => closePreviousAccordion(index)
+);
+
+/* Проверяем мобильный квери */
+
+updateMatches();
+mobileMedia.addEventListener("change", updateMatches);
+
+function updateMatches() {
+  if (mobileMedia.matches) {
+    accordions.forEach((accordion, index) => {
+      accordion.open = false;
+
+      const summary = accordion.firstElementChild;
+      summary.removeEventListener("click", cancelEvent);
+      summary.addEventListener("click", triggerClosePrevHandlers[index]);
+    });
+  } else {
+    openedAccordionOnMobile = false;
+    accordions.forEach((accordion, index) => {
+      /* По умолчанию открыты, но закрывает на мобильных
+       */
+      accordion.open = true;
+
+      const summary = accordion.firstElementChild;
+      summary.removeEventListener("click", triggerClosePrevHandlers[index]);
+      summary.addEventListener("click", cancelEvent);
+    });
+  }
+}
+
+function cancelEvent(evt) {
+  evt.preventDefault();
+}
+
+function closePreviousAccordion(index) {
+  return () => {
+    if (
+      openedAccordionOnMobile !== false &&
+      openedAccordionOnMobile !== index
+    ) {
+      accordions[openedAccordionOnMobile].open = false;
+    }
+    openedAccordionOnMobile = index;
+  };
+}
+
+const hideSection = document.querySelector(".hide-section");
+const trigger = hideSection.querySelector(".hide-section__trigger");
+const hiddenElement = hideSection.querySelector("[data-hide]");
+const trimmedElement = hideSection.querySelector("[data-trim]");
+const savedTrimedText = trimmedElement.innerText;
+
+checkSection();
+
+function checkSection() {
+  updateSectionState(checkIsExpanded());
+}
+
+window.addEventListener("resize", checkSection);
+
+trigger.addEventListener("click", () => {
+  const isWillBeExpanded = !checkIsExpanded();
+  trigger.innerText = isWillBeExpanded ? "Свернуть" : "Подробнее";
+  trigger.ariaExpanded = String(isWillBeExpanded);
+
+  updateSectionState(isWillBeExpanded);
+});
+
+function updateSectionState(isWillBeExpanded = false) {
+  hiddenElement.hidden = !isWillBeExpanded;
+
+  trimmedElement.innerText = isWillBeExpanded
+    ? savedTrimedText
+    : getTrimmedText();
+}
+
+function getTrimmedText() {
+  const { trim, trimOn } = trimmedElement.dataset;
+
+  if (trimOn === "mobile") {
+    const isMobile = window.innerWidth < 768;
+    return isMobile ? savedTrimedText.slice(0, Number(trim)) : savedTrimedText;
+  }
+}
+
+function checkIsExpanded() {
+  return trigger.ariaExpanded === "true";
+}
+
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
 
 // привязывайте js не на классы, а на дата атрибуты (data-validate)

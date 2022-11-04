@@ -32,13 +32,13 @@
               <svg class="main-nav__icon" width="40" height="40" fill="#00b2ff" aria-hidden="true">
                 <use href="img/sprite_auto.svg#email"></use>
               </svg>
-              <span class="main-nav__link-text">info@sd.ru</span>
+              <span>info@sd.ru</span>
             </a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="tel:+74950005252"><svg class="main-nav__icon"
                 width="40" height="40" fill="#00b2ff">
                 <use href="img/sprite_auto.svg#phone"></use>
               </svg>
-              <span class="main-nav__link-text">+7 (495) 000 52 52</span></a></li>
+              <span>+7 (495) 000 52 52</span></a></li>
         </ul>
         <button class="main-nav__button">Заказать звонок</button>
       </div>
@@ -48,7 +48,7 @@
     <section class="main-block">
       <div class="main-block__container">
         <h1>Печатные платы</h1>
-        <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <p>производство и монтаж, поставка комплектующих,<br> блоков и модулей</p>
         <a href="#link1" class="main-block__button">
           <span class="main-block__button-mobile">Бесплатная консультация</span>
           <span class="main-block__button-tablet">Получить бесплатную консультацию</span>
@@ -157,89 +157,79 @@
       </ul>
     </section>
     <section class="form" id="link1">
-      <div class="form__container">
-        <div class="form__block">
-          <h3 class="form__title">Остались вопросы? Задайте их нам!</h3>
-          <p class="form__subtitle">Мы проконсультируем Вас бесплатно</p>
-          <form class="form__items" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="form__name" type="text" name="name" placeholder="Имя" required />
-            <input class="form__phone" type="tel" name="tel" placeholder="Телефон" required />
-            <textarea class="form__question" name="question" placeholder="Ваш вопрос" required></textarea>
-            <button class="form__button">Задать вопрос</button>
-            <p class="form__evidence">
-              <input type="checkbox" id="politics" />
-              Я согласен на обработку персональных данных
-            </p>
-          </form>
-        </div>
-      </div>
+      <h3>Остались вопросы? Задайте их нам!</h3>
+      <p>Мы проконсультируем Вас бесплатно</p>
+      <form class="form__items" action="https://echo.htmlacademy.ru/" method="post">
+        <label class="form__name"><input type="text" name="name" placeholder="Имя" required /><span
+            class="visually-hidden">Имя</span></label>
+        <label class="form__phone"><input type="tel" name="tel" placeholder="Телефон" required /><span
+            class="visually-hidden">Телефон</span></label>
+        <label class="form__question"><textarea name="question" placeholder="Ваш вопрос" required></textarea><span
+            class="visually-hidden">Ваш вопрос</span></label>
+        <button class="form__button">Задать вопрос</button>
+        <label class="form__evidence">
+          <input type="checkbox" id="politics" />
+          Я согласен на обработку персональных данных
+        </label>
+      </form>
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__container">
-      <div class="footer-socials">
-        <svg class="footer-socials__logo" width="215" height="55" fill="none">
-          <use href="img/sprite_auto.svg#logo"></use>
-        </svg>
-        <ul class="footer-socials__list">
-          <li class="footer-socials__item">
-            <a class="footer-socials__link" href="#">
-              <svg class="footer-socials__icon" width="40" height="40" fill="#f8fdff">
-                <use href="img/sprite_auto.svg#odnoklas"></use>
-              </svg>
-            </a>
+    <div class="footer-socials">
+      <svg class="footer-socials__logo" width="215" height="55" fill="none">
+        <use href="img/sprite_auto.svg#logo"></use>
+      </svg>
+      <ul class="footer-socials__list">
+        <li class="footer-socials__item">
+          <a class="footer-socials__link" href="#">
+            <svg class="footer-socials__icon" width="40" height="40" fill="#f8fdff">
+              <use href="img/sprite_auto.svg#odnoklas"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-socials__item">
+          <a class="footer-socials__link" href="#"><svg class="footer-socials__icon" width="40" height="40"
+              fill="#f8fdff">
+              <use href="img/sprite_auto.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-socials__item">
+          <a class="footer-socials__link" href="#">
+            <svg class="footer-socials__icon" width="40" height="40" fill="none">
+              <use href="img/sprite_auto.svg#pinteres"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__menu">
+      <details class="accordion" open="open">
+        <summary class="accordion__trigger">Разделы сайта</summary>
+        <ul class="accordion__list1">
+          <li class="accordion__item"><a href="#">О Компании</a></li>
+          <li class="accordion__item"><a href="#">Продукты</a></li>
+          <li class="accordion__item"><a href="#">Производство печатных плат</a>
           </li>
-          <li class="footer-socials__item">
-            <a class="footer-socials__link" href="#"><svg class="footer-socials__icon" width="40" height="40"
-                fill="#f8fdff">
-                <use href="img/sprite_auto.svg#vk"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer-socials__item">
-            <a class="footer-socials__link" href="#">
-              <svg class="footer-socials__icon" width="40" height="40" fill="none">
-                <use href="img/sprite_auto.svg#pinteres"></use>
-              </svg>
-            </a>
-          </li>
+          <li class="accordion__item"><a href="#">Монтаж печатных плат</a></li>
+          <li class="accordion__item"><a href="#">Комплектующие</a></li>
+          <li class="accordion__item"><a href="#">Доставка</a></li>
+          <li class="accordion__item"><a href="#">Контакты</a></li>
         </ul>
-      </div>
-      <div class="footer__text">
-        <div class="footer-section footer-section--opened footer-section--nojs">
-          <div class="footer-section__wrapper">
-            <h3 class="footer-section__title">Разделы сайта <button class="footer-section__toggle" type="button"><span
-                  class="visually-hidden">Открыть
-                  меню</span></button></h3>
-            <ul class="footer-section__list">
-              <li class="footer-section__item"><a href="#" class="footer-section__link">О Компании</a></li>
-              <li class="footer-section__item"><a href="#" class="footer-section__link">Продукты</a></li>
-              <li class="footer-section__item"><a href="#" class="footer-section__link">Производство печатных плат</a>
-              </li>
-              <li class="footer-section__item"><a href="#" class="footer-section__link">Монтаж печатных плат</a></li>
-              <li class="footer-section__item"><a href="#" class="footer-section__link">Комплектующие</a></li>
-              <li class="footer-section__item"><a href="#" class="footer-section__link">Доставка</a></li>
-              <li class="footer-section__item"><a href="#" class="footer-section__link">Контакты</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-address footer-address--opened footer-address--nojs">
-          <div class="footer-address__wrapper"></div>
-          <h3 class="footer-address__title">Наш офис <button class="footer-address__toggle" type="button"><span
-                class="visually-hidden">Открыть
-                меню</span></button></h3>
-          <ul class="footer-address__list">
-            <li class="footer-address__item"><a href="#" class="footer-address__link">г. Мытищи, Олимпийский проспект,
-                д.10</a></li>
-            <li class="footer-address__item"><a href="tel:+74955894050" class="footer-address__link">+7 (495)
-                589-40-50</a></li>
-            <li class="footer-address__item"><a href="tel:+79253895829" class="footer-address__link">+7 (925)
-                389-58-29</a></li>
-            <li class="footer-address__item"><a href="tel:+79253647813" class="footer-address__link">+7 (925)
-                364-78-13</a></li>
-          </ul>
-        </div>
-      </div>
+      </details>
+      <details class="accordion" open="open">
+        <summary class="accordion__trigger">Наш офис</summary>
+        <ul class="accordion__list2">
+          <li class="accordion__item"><a href="#">г. Мытищи, Олимпийский проспект,
+              д.10</a></li>
+          <li class="accordion__item"><a href="tel:+74955894050">+7 (495)
+              589-40-50</a></li>
+          <li class="accordion__item"><a href="tel:+79253895829">+7 (925)
+              389-58-29</a></li>
+          <li class="accordion__item"><a href="tel:+79253647813">+7 (925)
+              364-78-13</a></li>
+        </ul>
+      </details>
     </div>
   </footer>
   <div class="main-modal main-modal--closed">
