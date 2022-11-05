@@ -19,8 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
   });
 });
-const accordions = document.querySelectorAll(".accordion");
-const mobileQuery = "(max-width: 767px)";
+const accordions = document.querySelectorAll('.accordion');
+const mobileQuery = '(max-width: 767px)';
 const mobileMedia = window.matchMedia(mobileQuery);
 let openedAccordionOnMobile = false;
 
@@ -32,7 +32,7 @@ const triggerClosePrevHandlers = Array.from(
 /* Проверяем мобильный квери */
 
 updateMatches();
-mobileMedia.addEventListener("change", updateMatches);
+mobileMedia.addEventListener('change', updateMatches);
 
 function updateMatches() {
   if (mobileMedia.matches) {
@@ -40,8 +40,8 @@ function updateMatches() {
       accordion.open = false;
 
       const summary = accordion.firstElementChild;
-      summary.removeEventListener("click", cancelEvent);
-      summary.addEventListener("click", triggerClosePrevHandlers[index]);
+      summary.removeEventListener('click', cancelEvent);
+      summary.addEventListener('click', triggerClosePrevHandlers[index]);
     });
   } else {
     openedAccordionOnMobile = false;
@@ -51,8 +51,8 @@ function updateMatches() {
       accordion.open = true;
 
       const summary = accordion.firstElementChild;
-      summary.removeEventListener("click", triggerClosePrevHandlers[index]);
-      summary.addEventListener("click", cancelEvent);
+      summary.removeEventListener('click', triggerClosePrevHandlers[index]);
+      summary.addEventListener('click', cancelEvent);
     });
   }
 }
@@ -73,10 +73,10 @@ function closePreviousAccordion(index) {
   };
 }
 
-const hideSection = document.querySelector(".about__right-side");
-const trigger = hideSection.querySelector(".about__trigger");
-const hiddenElement = hideSection.querySelector("[data-hide]");
-const trimmedElement = hideSection.querySelector("[data-trim]");
+const hideSection = document.querySelector('.about__right-side');
+const trigger = hideSection.querySelector('.about__trigger');
+const hiddenElement = hideSection.querySelector('[data-hide]');
+const trimmedElement = hideSection.querySelector('[data-trim]');
 const savedTrimedText = trimmedElement.innerText;
 
 checkSection();
@@ -85,11 +85,11 @@ function checkSection() {
   updateSectionState(checkIsExpanded());
 }
 
-window.addEventListener("resize", checkSection);
+window.addEventListener('resize', checkSection);
 
-trigger.addEventListener("click", () => {
+trigger.addEventListener('click', () => {
   const isWillBeExpanded = !checkIsExpanded();
-  trigger.innerText = isWillBeExpanded ? "Свернуть" : "Подробнее";
+  trigger.innerText = isWillBeExpanded ? 'Свернуть' : 'Подробнее';
   trigger.ariaExpanded = String(isWillBeExpanded);
 
   updateSectionState(isWillBeExpanded);
@@ -106,14 +106,14 @@ function updateSectionState(isWillBeExpanded = false) {
 function getTrimmedText() {
   const { trim, trimOn } = trimmedElement.dataset;
 
-  if (trimOn === "mobile") {
+  if (trimOn === 'mobile') {
     const isMobile = window.innerWidth < 768;
     return isMobile ? savedTrimedText.slice(0, Number(trim)) : savedTrimedText;
   }
 }
 
 function checkIsExpanded() {
-  return trigger.ariaExpanded === "true";
+  return trigger.ariaExpanded === 'true';
 }
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.

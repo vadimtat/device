@@ -21,7 +21,7 @@
   font-weight: 400;
   font-size: 28px;
   line-height: 140.62%;
-  color: #FFFFFF;
+  color: #ffffff;
   display: none;
 
   @media (max-width: 768px) {
@@ -38,7 +38,7 @@
   font-size: 36px;
   line-height: 51px;
 
-  color: #FFFFFF;
+  color: #ffffff;
 
   @media (max-width: 1024px) {
     margin-top: 0;
@@ -68,7 +68,6 @@
   }
 
   @media (max-width: 768px) {
-    padding-top: 50px;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -105,8 +104,6 @@
     flex-direction: row;
     height: 250px;
   }
-
-  @media (max-width: 768px) {}
 }
 
 .products__name {

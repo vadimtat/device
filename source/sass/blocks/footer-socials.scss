@@ -28,9 +28,6 @@
 }
 
 .footer-socials__logo {
-
-  @media (max-width: 1024px) {}
-
   @media (max-width: 768px) {
     margin: 0 auto;
   }
@@ -38,8 +35,6 @@
 
 .footer-socials__list {
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   margin-top: 29px;
