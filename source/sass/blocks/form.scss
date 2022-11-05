@@ -11,7 +11,11 @@
     size: auto, 100%;
     repeat: no-repeat;
 
-    position: 350px 241px, 0 0;
+    position: 25% 241px, 0 0;
+  }
+
+  @media (max-width: 1440px) {
+    background: #00b3ff;
   }
 
   @media (max-width: 1024px) {

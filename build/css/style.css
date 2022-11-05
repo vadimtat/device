@@ -1407,7 +1407,7 @@ button,
   background-image: url("../img/paperairplane.png"), linear-gradient(139deg, rgba(4, 24, 39, 0.5) var(--grad-stop), transparent var(--grad-stop));
   background-size: auto, 100%;
   background-repeat: no-repeat;
-  background-position: 350px 241px, 0 0;
+  background-position: 25% 241px, 0 0;
 }
 
 .form__image {
@@ -1902,6 +1902,12 @@ button,
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .form {
+    background: #00b3ff;
   }
 }
 
