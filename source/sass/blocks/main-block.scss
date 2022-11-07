@@ -2,8 +2,7 @@
   padding: 0 var(--side-offset, 20px);
   margin: 0 auto;
   background: rgba(4, 24, 39, 0.5);
-  background-image: url("../img/mainbackgroundtablet.png");
-  // background-image: url("../img/mainbackgroundmobile.png");
+  background-image: url("../img/mainblock/mainbackgrounddesktop.png");
   background-repeat: no-repeat;
   background-position: 25% 50%;
   padding-top: 305px;
@@ -21,11 +20,19 @@
   }
 }
 
-.main-block h1 {
+.main-block__content {
+  padding-left: 125px;
+  max-width: 850px;
+
+  @media (max-width: 1024px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.main-block__content h1 {
   margin: 0;
-  margin-left: 125px;
   font-family: $ff-accent;
-  font-style: normal;
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;
@@ -47,12 +54,10 @@
   }
 }
 
-.main-block p {
+.main-block__content p {
   margin-bottom: 45px;
   margin-top: 32px;
-  margin-left: 125px;
-  font-family: $ff-default;
-  font-style: normal;
+  margin-right: 40px;
   font-weight: 400;
   font-size: 22px;
   line-height: 155%;
@@ -65,7 +70,6 @@
 
   @media (max-width: 768px) {
     margin: 7px 0 0 0;
-
     font-weight: 400;
     font-size: 14px;
     line-height: 155%;
@@ -73,10 +77,10 @@
 }
 
 .main-block__button {
+  margin-top: 48px;
   max-width: 410px;
   font-family: $ff-accent;
   padding: 15px 25px;
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
@@ -89,8 +93,6 @@
   border: none;
   background: #00b2ff;
   border-radius: 3px;
-  margin-top: 48px;
-  margin-left: 125px;
 
   @media (max-width: 1024px) {
     margin-top: 60px;
@@ -99,8 +101,8 @@
 
   @media (max-width: 768px) {
     max-width: 270px;
-    margin: 26px 0 0 0;
-    padding: 10px 37px;
+    margin: 45px 0 0 0;
+    padding: 12px 37px;
     font-size: 14px;
     line-height: 16px;
     display: flex;

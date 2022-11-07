@@ -1,10 +1,8 @@
 .footer-socials {
   display: flex;
   flex-direction: column;
-  margin-top: 48px;
 
   @media (max-width: 1024px) {
-    margin-top: 50px;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -16,9 +14,7 @@
 }
 
 .footer-socials__link {
-  @media (min-width: 768px) {
-    text-decoration: none;
-  }
+  text-decoration: none;
 }
 
 .footer-socials__icon {
@@ -35,14 +31,14 @@
 
 .footer-socials__list {
   padding: 0;
-  display: flex;
-  list-style-type: none;
   margin-top: 29px;
   margin-left: 10px;
+  display: flex;
+  list-style-type: none;
 
   @media (max-width: 1024px) {
-    align-items: center;
     margin: 0;
+    align-items: center;
     justify-content: flex-end;
   }
 

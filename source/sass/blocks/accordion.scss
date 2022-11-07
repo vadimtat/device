@@ -2,7 +2,6 @@
   &__trigger {
     font-family: $ff-accent;
     position: relative;
-    font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 16px;
@@ -26,13 +25,20 @@
 
 
     &__trigger {
+      position: relative;
       display: flex;
       justify-content: space-between;
       cursor: pointer;
       padding: 22px 25px;
 
       &::after {
-        content: "➕";
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 15px;
+        right: 26px;
+        background-image: url("../img/svg/Unionplus.svg");
+
       }
 
       &--blocked {
@@ -50,7 +56,12 @@
     }
 
     &[open] &__trigger::after {
-      content: "➖";
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 15px;
+      right: 26px;
+      background-image: url("../img/svg/Unionminus.svg");
     }
   }
 }

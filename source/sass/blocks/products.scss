@@ -4,20 +4,20 @@
   background-size: cover;
   margin: 0 auto;
   padding-top: 55px;
+  padding-bottom: 144px;
 
   @media (max-width: 1024px) {
-    padding-bottom: 0;
+    padding-bottom: 75px;
   }
 
   @media (max-width: 768px) {
-    padding-top: 50px;
+    padding-top: 45px;
     padding-bottom: 86px;
   }
 }
 
 .products__title--mobile {
   font-family: $ff-accent;
-  font-style: normal;
   font-weight: 400;
   font-size: 28px;
   line-height: 140.62%;
@@ -31,7 +31,6 @@
 
 .products__title--tablet {
   font-family: $ff-accent;
-  font-style: normal;
   display: block;
   margin-top: 10px;
   font-weight: 400;
@@ -57,13 +56,11 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 85px;
   margin-top: 54px;
-  padding-bottom: 144px;
 
   @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
     margin-top: 38px;
-    padding-bottom: 75px;
     gap: 30px;
   }
 
@@ -71,7 +68,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    margin-top: 26px;
+    margin-top: 29px;
   }
 }
 
@@ -104,20 +101,25 @@
     flex-direction: row;
     height: 250px;
   }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 }
 
 .products__name {
   font-family: $ff-accent;
-  max-width: 203px;
   margin: 0;
-  padding: 28px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   color: #ffffff;
+  max-width: 160px;
+  margin-top: 47px;
+  margin-left: 41px;
 
-  @media (min-width: 768px) {
+  @media (max-width: 1024px) {
     max-width: 150px;
     padding: 0;
     font-size: 20px;
@@ -125,10 +127,10 @@
     margin-left: 45px;
   }
 
-  @media (min-width: 1024px) {
-    max-width: 160px;
-    margin-top: 47px;
-    margin-left: 41px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+    max-width: none;
+    margin: 27px 105px 0 30px;
   }
 }
 
@@ -139,40 +141,40 @@
 }
 
 .products__card--one {
-  background-image: url("../img/card1desktop.png");
+  background-image: url("../img/card/card1desktop.png");
 
 
   @media (max-width: 1024px) {
-    background-image: url("../img/card1tablet.png");
+    background-image: url("../img/card/card1tablet.png");
   }
 
   @media (max-width: 320px) {
-    background-image: url("../img/card1.png");
+    background-image: url("../img/card/card1.png");
   }
 }
 
 .products__card--two {
-  background-image: url("../img/card2desktop.png");
+  background-image: url("../img/card/card2desktop.png");
 
 
   @media (max-width: 1024px) {
-    background-image: url("../img/card2tablet.png");
+    background-image: url("../img/card/card2tablet.png");
   }
 
   @media (max-width: 320px) {
-    background-image: url("../img/card2.png");
+    background-image: url("../img/card/card2.png");
   }
 }
 
 .products__card--three {
-  background-image: url("../img/card3desktop.png");
+  background-image: url("../img/card/card3desktop.png");
 
 
   @media (max-width: 1024px) {
-    background-image: url("../img/card3tablet.png");
+    background-image: url("../img/card/card3tablet.png");
   }
 
   @media (max-width: 320px) {
-    background-image: url("../img/card3.png");
+    background-image: url("../img/card/card3.png");
   }
 }

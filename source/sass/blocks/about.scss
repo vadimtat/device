@@ -1,34 +1,33 @@
 .about {
   padding: 0 var(--side-offset, 20px);
-  margin-top: 121px;
-  margin-bottom: 100px;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  justify-content: space-between;
   display: flex;
   width: 100%;
+  background: #f8fdff;
 
   @media (max-width: 1024px) {
-    margin-top: 75px;
-    margin-bottom: 53px;
+    padding-top: 35px;
+    padding-bottom: 80px;
   }
 
   @media (max-width: 768px) {
-    margin: 41px 0 85px 0;
+    padding-top: 25px;
   }
 }
 
 .about__left-side {
-  display: none;
+  margin-top: 5px;
+  display: block;
 
-  @media (min-width: 768px) {
-    display: block;
-  }
-
-  @media (min-width: 1024px) {
-    margin-left: 8px;
+  @media (max-width: 768px) {
+    display: none;
   }
 }
 
 .about__right-side {
-  margin-left: 100px;
+  margin-left: 30px;
   max-width: 970px;
 
   @media (max-width: 1024px) {
@@ -38,13 +37,6 @@
 
   @media (max-width: 768px) {
     margin-left: 0;
-  }
-}
-
-.about__image {
-  @media (min-width: 1024px) {
-    min-width: 150px;
-    min-height: 320px;
   }
 }
 
@@ -66,16 +58,14 @@
 
   @media (max-width: 768px) {
     font-size: 28px;
+    line-height: 140.62%;
     margin: 0;
   }
 }
 
 .about p {
   margin: 0;
-  font-family: $ff-default;
-  font-style: normal;
   font-weight: 400;
-  font-size: 16px;
   line-height: 22px;
   color: #041827;
 
@@ -86,19 +76,22 @@
   }
 
   @media (max-width: 768px) {
-    margin-top: 0;
+    margin-top: 10px;
     font-size: 14px;
     line-height: 134.4%;
   }
 }
 
+.about p+p {
+  margin-top: 20px;
+}
+
 .about__trigger {
-  margin-top: 12px;
-  max-width: 160px;
-  padding: 8px 15px 12px 15px;
-  margin-bottom: 20px;
+  margin-top: 39px;
+  width: 100%;
+  max-width: 180px;
+  padding: 15px 15px 12px 15px;
   font-family: $ff-accent;
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -110,13 +103,14 @@
   border-radius: 3px;
   background: none;
 
-  @media (min-width: 768px) {
+  @media (max-width: 1024px) {
     margin-top: 16px;
-    max-width: 179px;
     padding: 13px 19px 14px 19px;
   }
 
-  @media (min-width: 1024px) {
-    margin-top: 39px;
+  @media (max-width: 768px) {
+    margin-top: 12px;
+    max-width: 160px;
+    padding: 8px 15px 12px 15px;
   }
 }

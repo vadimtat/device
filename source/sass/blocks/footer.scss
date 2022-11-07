@@ -2,8 +2,11 @@
   padding: 0 var(--side-offset, 20px);
   background: #041827;
   display: flex;
+  padding-top: 48px;
+  padding-bottom: 35px;
 
   @media (max-width: 1024px) {
+    padding-top: 50px;
     flex-direction: column;
   }
 
@@ -31,16 +34,15 @@
 }
 
 .footer__menu {
-  margin-top: 54px;
+  margin-top: 7px;
   margin-left: auto;
+  display: flex;
   max-width: 845px;
   width: 100%;
   justify-content: space-between;
-  display: flex;
-  padding-bottom: 35px;
 
   @media (max-width: 1024px) {
-    margin-top: 37px;
+    margin-top: 40px;
   }
 
   @media (max-width: 768px) {
