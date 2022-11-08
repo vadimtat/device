@@ -41,8 +41,6 @@
 .main-nav__logo {
   margin-right: auto;
 
-  @media (max-width: 1024px) {}
-
   @media (max-width: 768px) {
     margin-top: 5px;
   }
@@ -87,7 +85,7 @@
   }
 }
 
-.main-nav__list li+li {
+.main-nav__list li + li {
   @media (max-width: 1024px) {
     margin-left: 20px;
   }
@@ -118,5 +116,4 @@
   @media (max-width: 1024px) {
     margin: 0;
   }
-
 }
