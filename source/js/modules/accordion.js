@@ -9,12 +9,14 @@ const triggerClosePrevHandlers = Array.from(
 );
 
 /* Проверяем мобильный квери */
+export function initAccordions() {
+  updateMatches();
 
-updateMatches();
-mobileMedia.addEventListener('change', updateMatches);
+  mobileMedia.addEventListener('change', updateMatches);
+}
 
 function updateMatches() {
-  if (mobileMedia.matches) {
+  if (mobileMedia.matches && accordions) {
     accordions.forEach((accordion, index) => {
       accordion.open = false;
 

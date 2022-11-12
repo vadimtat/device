@@ -139,6 +139,7 @@ export class Modals {
     if (!modal || modal.classList.contains('is-active')) {
       return;
     }
+    const focusedElement = modal.querySelector('[autofocus]');
 
     document.removeEventListener('click', this._documentClickHandler);
 
@@ -168,6 +169,9 @@ export class Modals {
       this._addListeners(modal);
       this._autoPlay(modal);
       document.addEventListener('click', this._documentClickHandler);
+      if (focusedElement) {
+        focusedElement.focus();
+      }
     }, this._eventTimeout);
   }
 

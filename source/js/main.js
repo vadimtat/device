@@ -1,6 +1,7 @@
 import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
-import './modules/accordion';
+import { initAccordions } from './modules/accordion';
+import { initAbouts } from './modules/about';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -9,6 +10,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  initAccordions();
+  initAbouts();
 
   // Modules
   // ---------------------------------
@@ -19,49 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
   });
 });
-
-const hideSection = document.querySelector('.about__right-side');
-const trigger = hideSection.querySelector('.about__trigger');
-const hiddenElement = hideSection.querySelector('[data-hide]');
-const trimmedElement = hideSection.querySelector('[data-trim]');
-const savedTrimedText = trimmedElement.innerText;
-
-checkSection();
-
-function checkSection() {
-  updateSectionState(checkIsExpanded());
-}
-
-window.addEventListener('resize', checkSection);
-
-trigger.addEventListener('click', () => {
-  const isWillBeExpanded = !checkIsExpanded();
-  trigger.innerText = isWillBeExpanded ? 'Свернуть' : 'Подробнее';
-  trigger.ariaExpanded = String(isWillBeExpanded);
-
-  updateSectionState(isWillBeExpanded);
-});
-
-function updateSectionState(isWillBeExpanded = false) {
-  hiddenElement.hidden = !isWillBeExpanded;
-
-  trimmedElement.innerText = isWillBeExpanded
-    ? savedTrimedText
-    : getTrimmedText();
-}
-
-function getTrimmedText() {
-  const { trim, trimOn } = trimmedElement.dataset;
-
-  if (trimOn === 'mobile') {
-    const isMobile = window.innerWidth < 768;
-    return isMobile ? savedTrimedText.slice(0, Number(trim)) : savedTrimedText;
-  }
-}
-
-function checkIsExpanded() {
-  return trigger.ariaExpanded === 'true';
-}
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
 

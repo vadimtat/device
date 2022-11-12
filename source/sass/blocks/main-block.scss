@@ -1,8 +1,11 @@
 .main-block {
   padding: 0 var(--side-offset, 20px);
   margin: 0 auto;
-  background: rgba(4, 24, 39, 0.5);
-  background-image: url("../img/mainblock/mainbackgrounddesktop.png");
+  background: rgba(4, 24, 39,);
+  background-image: image-set(
+    url("../img/mainblock/mainbackgrounddesktop.jpg") 1x,
+    url("../img/mainblock/mainbackgrounddesktop2x.jpg") 2x
+    );
   background-repeat: no-repeat;
   background-position: 25% 50%;
   padding-top: 305px;
