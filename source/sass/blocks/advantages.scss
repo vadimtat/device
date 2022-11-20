@@ -4,7 +4,7 @@
   padding-bottom: 60px;
   background: #f8fdff;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     padding-top: 80px;
     padding-bottom: 40px;
   }
@@ -46,7 +46,7 @@
     min-height: 300px;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     padding: 40px 44px 35px 41px;
     margin: 0;
 
@@ -95,7 +95,7 @@
   margin-top: 4px;
   fill: #00b2ff;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     margin-top: 0;
   }
 
@@ -108,7 +108,7 @@
 
 .advantages h3 {
   margin: 0;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 15px;
   font-family: $ff-accent;
   font-weight: 400;
@@ -116,7 +116,7 @@
   line-height: 140%;
   color: #00b2ff;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     margin-top: 14px;
     margin-bottom: 0;
     font-size: 24px;
@@ -134,7 +134,7 @@
   line-height: 135%;
   color: #041827;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     margin-top: 4px;
     font-size: 16px;
   }

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -18,6 +18,12 @@
 }
 
 .footer-socials__icon {
+  transition: 300ms;
+
+  &:hover {
+    fill: #00b3ff;
+  }
+
   @media (max-width: 768px) {
     display: block;
   }
@@ -35,8 +41,9 @@
   margin-left: 10px;
   display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     margin: 0;
     align-items: center;
     justify-content: flex-end;
@@ -52,7 +59,7 @@
 .footer-socials__item {
   margin-right: 15px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     margin-right: 0;
     margin-left: 10px;
   }

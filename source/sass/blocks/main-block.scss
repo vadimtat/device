@@ -12,7 +12,7 @@
   padding-bottom: 280px;
   background-size: cover;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     padding-top: 179px;
     padding-bottom: 207px;
   }
@@ -27,7 +27,7 @@
   padding-left: 125px;
   max-width: 850px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -43,7 +43,7 @@
   text-transform: uppercase;
   color: #f2f5f7;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     font-size: 64px;
     line-height: 75px;
     margin-left: 0;
@@ -66,7 +66,7 @@
   line-height: 155%;
   color: #f2f5f7;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     margin-top: 0;
     margin-left: 0;
   }
@@ -96,8 +96,15 @@
   border: none;
   background: #00b2ff;
   border-radius: 3px;
+  user-select: none;
+  transition: 300ms;
 
-  @media (max-width: 1024px) {
+  &:hover {
+    color: #00b2ff;
+    background: #ffffff;
+  }
+
+  @media (max-width: 1023px) {
     margin-top: 60px;
     margin-left: 45px;
   }
@@ -114,6 +121,7 @@
 
 .main-block__button-mobile {
   display: none;
+  user-select: none;
 
   @media (max-width: 768px) {
     display: block;
@@ -121,6 +129,7 @@
 }
 
 .main-block__button-tablet {
+  user-select: none;
   display: block;
 
   @media (max-width: 768px) {

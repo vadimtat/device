@@ -14,6 +14,10 @@
     &::-webkit-details-marker {
       display: none; // Для старых Chrome и Safari
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   @media (max-width: 767px) {
@@ -74,7 +78,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     max-height: none;
     max-width: 224px;
   }
@@ -91,7 +95,7 @@
   padding: 0;
   list-style-type: none;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     margin-right: 9px;
   }
 
@@ -114,6 +118,10 @@
     font-size: 14px;
     line-height: 135%;
   }
+
+  &:hover {
+    color: #00b3ff;
+  }
 }
 
 .accordion__list1 .accordion__item {
@@ -121,7 +129,7 @@
   margin-right: 22px;
   max-width: 230px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     max-width: none;
   }
 
@@ -135,7 +143,7 @@
   margin-right: 22px;
   max-width: 310px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     margin-right: 0;
   }
 }

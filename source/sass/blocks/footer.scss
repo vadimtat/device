@@ -5,7 +5,7 @@
   padding-top: 48px;
   padding-bottom: 35px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     padding-top: 50px;
     flex-direction: column;
   }
@@ -40,8 +40,9 @@
   max-width: 845px;
   width: 100%;
   justify-content: space-between;
+  flex-wrap: wrap;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     margin-top: 40px;
   }
 

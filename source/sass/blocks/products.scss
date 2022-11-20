@@ -6,7 +6,7 @@
   padding-top: 55px;
   padding-bottom: 144px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     padding-bottom: 75px;
   }
 
@@ -39,8 +39,9 @@
 
   color: #ffffff;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     margin-top: 0;
+    text-align: center;
     display: block;
   }
 
@@ -52,12 +53,12 @@
 .products__list {
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 85px;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
   margin-top: 54px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     display: flex;
     flex-direction: column;
     margin-top: 38px;
@@ -73,9 +74,11 @@
 }
 
 .products__icon {
+  margin-left: auto;
+  margin-top: auto;
   display: block;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     width: 60px;
     height: 60px;
   }
@@ -86,23 +89,37 @@
   }
 }
 
+.products__list li {
+  width: 100%;
+  max-width: 320px;
+  transition: 300ms;
+
+  @media (max-width: 1023px) {
+    max-width: none;
+  }
+
+  &:hover {
+    box-shadow: 0 0 3px 3px #00b3ff;
+  }
+}
+
 .products__card {
   background: rgba(4, 24, 39,);
   display: flex;
-  width: 100%;
   height: 650px;
 
   &:last-child {
-    margin: 0;
+    margin: 0 auto;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
+    margin: 0 auto;
     max-width: 670px;
     flex-direction: row;
     height: 250px;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     flex-direction: column;
   }
 }
@@ -119,7 +136,7 @@
   margin-top: 47px;
   margin-left: 41px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     max-width: 150px;
     padding: 0;
     font-size: 20px;
@@ -135,73 +152,55 @@
 }
 
 .products__link {
-  margin-top: auto;
-  margin-left: auto;
   text-decoration: none;
+  display: flex;
 }
 
 .products__card--one {
-  background-image: image-set(
-    url("../img/card/card1desktopx2.jpg") 2x,
-    url("../img/card/card1desktop.png") 1x
-  );
+  background-image: image-set(url("../img/card/card1desktopx2.jpg") 2x,
+      url("../img/card/card1desktop.png") 1x);
 
 
-  @media (max-width: 1024px) {
-    background-image: image-set(
-      url("../img/card/card1tablet.png") 1x,
-      url("../img/card/card1tabletx2.jpg") 2x
-    );
+  @media (max-width: 1023px) {
+    background-image: image-set(url("../img/card/card1tablet.png") 1x,
+        url("../img/card/card1tabletx2.jpg") 2x);
   }
 
   @media (max-width: 320px) {
-    background-image:image-set(
-      url("../img/card/card1.png") 1x,
-      url("../img/card/card1x2.jpg") 2x,
-    );
+    background-image: image-set(url("../img/card/card1.png") 1x,
+        url("../img/card/card1x2.jpg") 2x,
+      );
   }
 }
 
 .products__card--two {
-  background-image: image-set(
-    url("../img/card/card2desktop.png") 1x,
-    url("../img/card/card2desktopx2.jpg") 2x
-  );
+  background-image: image-set(url("../img/card/card2desktop.png") 1x,
+      url("../img/card/card2desktopx2.jpg") 2x);
 
 
-  @media (max-width: 1024px) {
-    background-image: image-set(
-      url("../img/card/card2tablet.png") 1x,
-      url("../img/card/card2tabletx2.jpg") 2x
-    );
+  @media (max-width: 1023px) {
+    background-image: image-set(url("../img/card/card2tablet.png") 1x,
+        url("../img/card/card2tabletx2.jpg") 2x);
   }
 
   @media (max-width: 320px) {
-    background-image:image-set(
-      url("../img/card/card2.png") 1x,
-      url("../img/card/card2x2.jpg") 2x
-    );
+    background-image: image-set(url("../img/card/card2.png") 1x,
+        url("../img/card/card2x2.jpg") 2x);
   }
 }
 
 .products__card--three {
-  background-image: image-set(
-    url("../img/card/card3desktop.png") 1x,
-    url("../img/card/card3desktopx2.jpg") 2x
-  );
+  background-image: image-set(url("../img/card/card3desktop.png") 1x,
+      url("../img/card/card3desktopx2.jpg") 2x);
 
 
-  @media (max-width: 1024px) {
-    background-image: image-set(
-      url("../img/card/card3tablet.png") 1x,
-      url("../img/card/card3tabletx2.jpg") 2x
-    );
+  @media (max-width: 1023px) {
+    background-image: image-set(url("../img/card/card3tablet.png") 1x,
+        url("../img/card/card3tabletx2.jpg") 2x);
   }
 
   @media (max-width: 320px) {
-    background-image:image-set(
-      url("../img/card/card3.png") 1x,
-      url("../img/card/card3x2.jpg") 2x
-    );
+    background-image: image-set(url("../img/card/card3.png") 1x,
+        url("../img/card/card3x2.jpg") 2x);
   }
 }
