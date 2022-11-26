@@ -2,9 +2,9 @@
   padding: 0 var(--side-offset, 20px);
   background: #041827;
   background-size: cover;
-  margin: 0 auto;
   padding-top: 55px;
   padding-bottom: 144px;
+
 
   @media (max-width: 1023px) {
     padding-bottom: 75px;
@@ -54,11 +54,13 @@
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
   list-style-type: none;
   margin-top: 54px;
+  gap: 85px;
 
   @media (max-width: 1023px) {
+    max-width: 670px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     margin-top: 38px;
@@ -91,10 +93,11 @@
 
 .products__list li {
   width: 100%;
-  max-width: 320px;
+  max-width: 350px;
   transition: 300ms;
 
   @media (max-width: 1023px) {
+    margin: 0 auto;
     max-width: none;
   }
 
@@ -108,12 +111,7 @@
   display: flex;
   height: 650px;
 
-  &:last-child {
-    margin: 0 auto;
-  }
-
   @media (max-width: 1023px) {
-    margin: 0 auto;
     max-width: 670px;
     flex-direction: row;
     height: 250px;

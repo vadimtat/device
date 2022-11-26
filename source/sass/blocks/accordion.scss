@@ -14,10 +14,6 @@
     &::-webkit-details-marker {
       display: none; // Для старых Chrome и Safari
     }
-
-    &:focus {
-      outline: none;
-    }
   }
 
   @media (max-width: 767px) {

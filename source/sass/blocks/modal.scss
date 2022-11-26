@@ -63,8 +63,8 @@
 
   &__close-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 18px;
+    right: 16px;
     z-index: 1;
 
     width: 40px;
@@ -78,7 +78,7 @@
 
   &__title {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 3px;
     font-family: $ff-accent;
     font-style: normal;
     font-weight: 400;
@@ -145,13 +145,13 @@
   }
 
   & textarea {
-    padding: 15px;
+    padding: 19px 15px;
     background: rgba(4, 20, 39, 0.15);
     border: none;
     border-radius: 3px;
     max-width: 420px;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
     font-family: $ff-default;
     font-style: normal;
     font-weight: 400;
@@ -213,7 +213,7 @@
 }
 
 .modal-button {
-  width: 160px;
+  min-width: 160px;
   height: 40px;
   border: 1px solid #f2f5f7;
   border-radius: 3px;
@@ -228,7 +228,7 @@
   text-transform: uppercase;
   color: #f2f5f7;
   cursor: pointer;
-  margin-right: 61px;
+  margin-right: 60px;
   margin-top: 5px;
   background-color: transparent;
   padding: 10px 15px;
@@ -250,6 +250,8 @@
   line-height: 16px;
   color: #ffffff;
   opacity: 0.8;
+  transition: 300ms;
+  cursor: pointer;
 
   @media (max-width: 1023px) {
     margin-top: 17px;
@@ -259,6 +261,10 @@
   @media (max-width: 768px) {
     margin-top: 3px;
     margin-left: 31px;
+  }
+
+  &:hover {
+    color: #041827;
   }
 }
 
@@ -282,6 +288,12 @@
   width: 15px;
   height: 15px;
   background-image: url("../img/svg/checkbox.svg");
+  transition: 300ms;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 1px 1px #041827;
+  }
 }
 
 .modal-check input[type="checkbox"]:checked + .modal-check__mark {

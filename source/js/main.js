@@ -3,6 +3,7 @@ import { initModals } from './modules/modals/init-modals';
 import { initAccordions } from './modules/accordion';
 import { initAbouts } from './modules/about';
 import { initMaskPhone } from './modules/mask';
+import { initForms } from './modules/valid';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initAccordions();
   initAbouts();
   initMaskPhone();
+  initForms();
 
   // Modules
   // ---------------------------------

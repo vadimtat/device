@@ -7,9 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Описание проекта">
   <title>ProjectName</title>
-  <link rel="preload" href="/fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -48,7 +47,7 @@
       <section class="main-block">
         <div class="main-block__content">
           <h1>Печатные платы</h1>
-          <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
           <a href="#link1" class="main-block__button">
             <span class="main-block__button-mobile">Бесплатная консультация</span>
             <span class="main-block__button-tablet">Получить бесплатную консультацию</span>
@@ -64,7 +63,7 @@
             </svg>
             <h3>Оперативные сроки </h3>
             <p>Усовершенствованная логистическая система позволяет нам просчитывать
-              стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+              стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
           </li>
           <li class="advantages__item">
             <svg class="advantages__icon" width="35" height="35" fill="none">
@@ -72,7 +71,7 @@
             </svg>
             <h3>Крупные поставщики</h3>
             <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM,
-              CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей
+              CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей
               продукции.
             </p>
           </li>
@@ -81,7 +80,7 @@
               <use href="img/sprite_auto.svg#confidentiality"></use>
             </svg>
             <h3>Полная конфиденциальность</h3>
-            <p>По желанию клиента мы обеспечиваем полную конфиденциальность.
+            <p>По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.
             </p>
           </li>
           <li class="advantages__item">
@@ -89,8 +88,8 @@
               <use href="img/sprite_auto.svg#price"></use>
             </svg>
             <h3>Персонализация стоимости</h3>
-            <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы
-              установить ту цену, которая Вас устраивает.
+            <p>Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы
+              установить ту&nbsp;цену, которая Вас устраивает.
             </p>
           </li>
         </ul>
@@ -163,22 +162,32 @@
         </ul>
       </section>
       <section class="form" id="link1">
-        <h3>Остались вопросы? Задайте их нам!</h3>
-        <p>Мы проконсультируем Вас бесплатно</p>
-        <form class="form__items" action="https://echo.htmlacademy.ru/" method="post">
-          <label><input type="text" name="name" placeholder="Имя" required /><span
-              class="visually-hidden">Имя</span></label>
-          <label><input class="phone_us" type="tel" name="tel" placeholder="Телефон" required /><span
-              class="visually-hidden">Телефон</span></label>
-          <label class="form__question"><textarea name="question" placeholder="Ваш вопрос"></textarea><span
-              class="visually-hidden">Ваш вопрос</span></label>
-          <label class="form-check">
-            <input type="checkbox" name="checkbox" required>
-            <span class="form-check__mark"></span>
-            <span class="form-check__label">Я согласен на обработку персональных данных</span>
-          </label>
-          <button class="form__button">Задать вопрос</button>
-        </form>
+        <div class="form__left">
+          <picture>
+            <source type="image/webp"
+              srcset="./img/paperairplane.webp 1x, ./img/paperairplane2x.webp 2x, ./img/paperairplane3x.webp 3x">
+            <source srcset="./img/paperairplane.png 1x, ./img/paperairplane2x.png 2x, ./img/paperairplane3x.png 3x">
+            <img class="form__image" src="./img/paperairplane.png" alt="самолетик" width="510" height="285">
+          </picture>
+        </div>
+        <div class="form__rigth">
+          <h3>Остались вопросы? Задайте их нам!</h3>
+          <p>Мы проконсультируем Вас бесплатно</p>
+          <form class="form__items" action="https://echo.htmlacademy.ru/" method="post">
+            <label><input type="text" name="name" placeholder="Имя" required /><span
+                class="visually-hidden">Имя</span></label>
+            <label><input class="phone-us" type="tel" name="tel" placeholder="Телефон" required /><span
+                class="visually-hidden">Телефон</span></label>
+            <label class="form__question"><textarea name="question" placeholder="Ваш вопрос"></textarea><span
+                class="visually-hidden">Ваш вопрос</span></label>
+            <label class="form-check">
+              <input type="checkbox" name="checkbox" required>
+              <span class="form-check__mark"></span>
+              <span class="form-check__label">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+            </label>
+            <button type="submit" class="form__button"> Задать вопрос</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -212,7 +221,7 @@
       </div>
       <div class="footer__menu">
         <details class="accordion" open="open">
-          <summary class="accordion__trigger">Разделы сайта</summary>
+          <summary class="accordion__trigger" tabindex="-1">Разделы сайта</summary>
           <ul class="accordion__list1">
             <li class="accordion__item"><a href="#">О Компании</a></li>
             <li class="accordion__item"><a href="#">Продукты</a></li>
@@ -225,7 +234,7 @@
           </ul>
         </details>
         <details class="accordion" open="open">
-          <summary class="accordion__trigger">Наш офис</summary>
+          <summary class="accordion__trigger" tabindex="-1">Наш офис</summary>
           <ul class="accordion__list2">
             <li class="accordion__item"><a href="#">г. Мытищи, Олимпийский проспект,
                 д.10</a></li>
@@ -254,7 +263,7 @@
         <form class="modal__items" action="https://echo.htmlacademy.ru/" method="post">
           <label><input class="modal__name" type="text" name="name" placeholder="Имя" required autofocus /><span
               class="visually-hidden">Имя</span></label>
-          <label><input class="phone_us" type="tel" name="tel" placeholder="Телефон" required /><span
+          <label><input class="phone-us" type="tel" name="tel" placeholder="Телефон" required /><span
               class="visually-hidden">Телефон</span></label>
           <label><textarea class="modal__question" rows="5" name="question" placeholder="Ваш вопрос"></textarea><span
               class="visually-hidden">Вопрос</span></label>

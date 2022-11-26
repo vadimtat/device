@@ -711,8 +711,8 @@ button,
 
 .modal__close-btn {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 18px;
+  right: 16px;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -724,7 +724,7 @@ button,
 
 .modal__title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 3px;
   font-family: "Roboto-Consensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -833,13 +833,13 @@ button,
 }
 
 .modal textarea {
-  padding: 15px;
+  padding: 19px 15px;
   background: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
   max-width: 420px;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
   font-family: "PT-Mono", "Verdana", monospace;
   font-style: normal;
   font-weight: 400;
@@ -933,7 +933,7 @@ button,
 }
 
 .modal-button {
-  width: 160px;
+  min-width: 160px;
   height: 40px;
   border: 1px solid #f2f5f7;
   border-radius: 3px;
@@ -948,7 +948,7 @@ button,
   text-transform: uppercase;
   color: #f2f5f7;
   cursor: pointer;
-  margin-right: 61px;
+  margin-right: 60px;
   margin-top: 5px;
   background-color: transparent;
   padding: 10px 15px;
@@ -971,6 +971,14 @@ button,
   line-height: 16px;
   color: #ffffff;
   opacity: 0.8;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.modal-check__label:hover {
+  color: #041827;
 }
 
 .modal-check {
@@ -997,6 +1005,15 @@ button,
   width: 15px;
   height: 15px;
   background-image: url("../img/svg/checkbox.svg");
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.modal-check__mark:hover {
+  -webkit-box-shadow: 0 0 1px 1px #041827;
+  box-shadow: 0 0 1px 1px #041827;
 }
 
 .modal-check input[type=checkbox]:checked + .modal-check__mark {
@@ -1043,10 +1060,6 @@ button,
   color: #00b3ff;
 }
 
-.main-nav__logo {
-  margin-right: auto;
-}
-
 .main-nav__logo-icon {
   display: block;
 }
@@ -1061,6 +1074,8 @@ button,
 }
 
 .main-nav__list {
+  width: 100%;
+  max-width: 470px;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -1068,13 +1083,15 @@ button,
   display: -ms-flexbox;
   display: flex;
   margin-left: auto;
-  margin-right: 54px;
+  margin-right: 140px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .main-nav__item {
-  margin-right: 112px;
   margin-top: 5px;
 }
 
@@ -1276,6 +1293,7 @@ button,
 }
 
 .about__image {
+  min-width: 150px;
   display: block;
 }
 
@@ -1341,7 +1359,6 @@ button,
   padding: 0 var(--side-offset, 20px);
   background: #041827;
   background-size: cover;
-  margin: 0 auto;
   padding-top: 55px;
   padding-bottom: 144px;
 }
@@ -1371,11 +1388,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   list-style-type: none;
   margin-top: 54px;
+  gap: 85px;
 }
 
 .products__icon {
@@ -1386,7 +1401,7 @@ button,
 
 .products__list li {
   width: 100%;
-  max-width: 320px;
+  max-width: 350px;
   -webkit-transition: 300ms;
   -o-transition: 300ms;
   transition: 300ms;
@@ -1403,10 +1418,6 @@ button,
   display: -ms-flexbox;
   display: flex;
   height: 650px;
-}
-
-.products__card:last-child {
-  margin: 0 auto;
 }
 
 .products__name {
@@ -1447,19 +1458,17 @@ button,
 .form {
   padding: 0 var(--side-offset, 20px);
   --grad-stop: 33.5%;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 157px;
-  padding-bottom: 250px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 230px;
   background-color: #00b3ff;
-  background-image: url("../img/paperairplane.png"), -o-linear-gradient(311deg, rgba(4, 24, 39, 0.5) var(--grad-stop), transparent var(--grad-stop));
-  background-image: url("../img/paperairplane.png"), linear-gradient(139deg, rgba(4, 24, 39, 0.5) var(--grad-stop), transparent var(--grad-stop));
-  background-size: auto, 100%;
-  background-repeat: no-repeat;
-  background-position: 25% 241px, 0 0;
+  background-image: -o-linear-gradient(311deg, rgba(4, 24, 39, 0.5) var(--grad-stop), transparent var(--grad-stop));
+  background-image: linear-gradient(139deg, rgba(4, 24, 39, 0.5) var(--grad-stop), transparent var(--grad-stop));
 }
 
 .form h3 {
@@ -1479,6 +1488,11 @@ button,
   font-weight: 400;
   line-height: 22px;
   color: #ffffff;
+}
+
+.form__left {
+  min-width: 510px;
+  padding: 82px 0;
 }
 
 .form__items {
@@ -1642,6 +1656,7 @@ button,
   -o-transition: 300ms;
   transition: 300ms;
   cursor: pointer;
+  max-height: 45px;
 }
 
 .form__button:hover {
@@ -1672,6 +1687,14 @@ button,
   line-height: 16px;
   color: #ffffff;
   opacity: 0.8;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.form-check__label:hover {
+  color: #041827;
 }
 
 .form-check {
@@ -1700,6 +1723,15 @@ button,
   width: 15px;
   height: 15px;
   background-image: url("../img/svg/checkbox.svg");
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.form-check__mark:hover {
+  -webkit-box-shadow: 0 0 1px 1px #041827;
+  box-shadow: 0 0 1px 1px #041827;
 }
 
 .form-check input[type=checkbox]:checked + .form-check__mark {
@@ -1708,6 +1740,11 @@ button,
 
 .form-check input[type=checkbox]:focus + .form-check__mark {
   outline: auto;
+}
+
+.form__error {
+  -webkit-box-shadow: 0 0 2px 2px #ff0000;
+  box-shadow: 0 0 2px 2px #ff0000;
 }
 
 .footer-socials {
@@ -1735,6 +1772,7 @@ button,
 }
 
 .footer-socials__list {
+  max-width: 215px;
   padding: 0;
   margin-top: 29px;
   margin-left: 10px;
@@ -1806,10 +1844,6 @@ button,
 
 .accordion__trigger::-webkit-details-marker {
   display: none;
-}
-
-.accordion__trigger:focus {
-  outline: none;
 }
 
 .accordion__list1 {
@@ -1933,10 +1967,6 @@ button,
     margin-right: 0;
     margin-top: 0;
   }
-
-  .form {
-    background-position: 5% 241px, 0 0;
-  }
 }
 
 @media (max-width: 1439px) {
@@ -1982,6 +2012,9 @@ button,
   }
 
   .main-nav__list {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     margin-right: 20px;
   }
 
@@ -2089,6 +2122,8 @@ button,
   }
 
   .products__list {
+    max-width: 670px;
+    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2106,11 +2141,11 @@ button,
   }
 
   .products__list li {
+    margin: 0 auto;
     max-width: none;
   }
 
   .products__card {
-    margin: 0 auto;
     max-width: 670px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2167,6 +2202,10 @@ button,
   .form p {
     margin-top: 7px;
     margin-left: 0;
+  }
+
+  .form__left {
+    display: none;
   }
 
   .form__items {
